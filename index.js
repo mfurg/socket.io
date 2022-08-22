@@ -5,7 +5,7 @@ const io = require("socket.io")(server, {
   },
 });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage";
 
 io.on("connection", (socket) => {
